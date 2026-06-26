@@ -1,0 +1,78 @@
+.dashboard {
+  width: 500px;
+  margin: 80px auto;
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.dashboard h1 {
+  color: #1e293b;
+  margin-bottom: 10px;
+}
+
+.dashboard h2 {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.add-job,
+.my-job-link,
+.view-applicants,
+.profile-link {
+  display: inline-block;
+  text-decoration: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  color: white;
+  margin: 10px;
+  font-weight: bold;
+}
+
+.add-job {
+  background: #2563eb;
+}
+
+.add-job:hover {
+  background: #1d4ed8;
+}
+
+.view-applicants {
+  background: #16a34a;
+}
+
+.view-applicants:hover {
+  background: #15803d;
+}
+
+.my-job-link {
+  background: #475569;
+}
+
+.my-job-link:hover {
+  background: #334155;
+}
+
+.profile-link {
+  background: #7c3aed;
+}
+
+.profile-link:hover {
+  background: #6d28d9;
+}
+
+@media (max-width: 600px) {
+  .dashboard {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .add-job,
+  .my-job-link,
+  .view-applicants,
+  .profile-link {
+    display: block;
+  }
+}

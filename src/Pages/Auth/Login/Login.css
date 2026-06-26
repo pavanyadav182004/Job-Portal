@@ -1,0 +1,95 @@
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* background-color: black; */
+  background-image: url("../../../assets/black.png");
+  background-repeat: no-repeat;
+ 
+  background-size: cover;
+  background-position: center;
+}
+
+/* Login Box */
+.login-box {
+  width: 500px; /* 400px se bada */
+  padding: 65px 40px;
+  border-radius: 20px;
+
+  /* Transparent Glass Effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(0, 215, 22, 0.3);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.login-box h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 32px;
+}
+
+.login-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.login-box input {
+  padding: 15px;
+  border: none;
+  outline: none;
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid green;
+  color: white;
+  font-size: 16px;
+}
+
+.login-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.login-box button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+  background: #37ff00;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.login-box button:hover {
+  background: #0dbe04;
+}
+
+.login-box p {
+  text-align: center;
+  color: rgb(255, 0, 0);
+}
+
+.login-box a {
+  color: #ff00ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.login-box a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .login-box {
+    width: 95%;
+    padding: 40px 20px;
+    margin: 20px;
+  }
+}

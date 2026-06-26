@@ -1,0 +1,103 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+}
+
+/* Dashboard Container */
+.dashboard {
+  width: min(900px, 90%);
+  margin: 80px auto;
+  background: #fff;
+  padding: 40px;
+  border-radius: 15px;
+  text-align: center;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.dashboard h1 {
+  color: #1e293b;
+  margin-bottom: 15px;
+}
+
+/* Welcome Text */
+.dashboard h2 {
+  color: #64748b;
+  margin-bottom: 30px;
+}
+
+.dashboard-actions {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+/* Common Button Style */
+.dashboard button {
+  width: 220px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* View Jobs */
+.view-jobs button {
+  background: #2563eb;
+}
+
+.view-jobs button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
+
+/* Applied Jobs */
+.applied-jobs button {
+  background: #16a34a;
+}
+
+.applied-jobs button:hover {
+  background: #15803d;
+  transform: translateY(-2px);
+}
+
+.saved-jobs button {
+  background: #475569;
+}
+
+.saved-jobs button:hover {
+  background: #334155;
+  transform: translateY(-2px);
+}
+
+/* Remove Link Underline */
+.dashboard a {
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .dashboard {
+    width: 90%;
+    padding: 25px;
+  }
+
+  .dashboard-actions {
+    flex-direction: column;
+  }
+
+  .dashboard button {
+    width: 100%;
+  }
+}

@@ -1,0 +1,46 @@
+.job-filter {
+  display: grid;
+  grid-template-columns: minmax(180px, 1fr) auto;
+  gap: 12px;
+  width: 100%;
+}
+
+.job-filter select,
+.job-filter button {
+  min-height: 44px;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.job-filter select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #cbd5e1;
+  color: #1e293b;
+  background: white;
+  outline: none;
+}
+
+.job-filter select:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.12);
+}
+
+.job-filter button {
+  padding: 0 16px;
+  border: none;
+  background: #dc2626; /* Changed to red */
+  color: white;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.job-filter button:hover {
+  background: #b91c1c; /* Changed to darker red on hover */
+}
+
+@media (max-width: 640px) {
+  .job-filter {
+    grid-template-columns: 1fr;
+  }
+}

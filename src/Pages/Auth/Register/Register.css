@@ -1,0 +1,127 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Register Container */
+.register-container {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url("../../../assets/black.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+/* Register Box */
+.register-box {
+  width: 500px;
+  padding: 50px 40px;
+  border-radius: 20px;
+
+  /* Glass Effect */
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+
+  border: 1px solid rgba(0, 215, 22, 0.3);
+  box-shadow: 0px 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.register-box h1 {
+  text-align: center;
+  margin-bottom: 25px;
+  color: white;
+  font-size: 32px;
+}
+
+/* Form */
+.register-box form {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+/* Inputs & Select */
+.register-box input,
+.register-box select {
+  padding: 15px;
+  border: 1px solid green;
+  outline: none;
+  border-radius: 10px;
+
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  font-size: 16px;
+}
+
+/* Placeholder */
+.register-box input::placeholder {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Select Option */
+.register-box select option {
+  background: black;
+  color: white;
+}
+
+/* Button */
+.register-box button {
+  padding: 15px;
+  border: none;
+  border-radius: 10px;
+
+  background: #11ff00;
+  color: black;
+
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.register-box button:hover {
+  background: #00dc07;
+}
+
+/* Paragraph */
+.register-box p {
+  text-align: center;
+  color: rgb(255, 255, 255);
+  margin-top: 20px;
+}
+
+/* Link */
+.register-box a {
+  color: #ff00ff;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.register-box a:hover {
+  text-decoration: underline;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .register-box {
+    width: 95%;
+    padding: 40px 20px;
+    margin: 20px;
+  }
+  
+  .form-row {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .register-box h1 {
+    font-size: 28px;
+  }
+}

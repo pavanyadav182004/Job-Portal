@@ -1,0 +1,270 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", sans-serif;
+}
+
+/* Header */
+header {
+  width: 100%;
+  background: #ffffff;
+  padding: 18px 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  position: relative;
+  z-index: 100;
+}
+
+/* Logo */
+.brand {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.brand:hover {
+  transform: scale(1.05);
+}
+
+.brand img {
+  width: 150px;
+  max-height: 50px;
+  object-fit: contain;
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  align-items: center;
+  gap: 45px;
+}
+
+/* Menu */
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 35px;
+}
+
+nav ul li {
+  position: relative;
+}
+
+/* Nav Links */
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #334155;
+  font-size: 16px;
+  font-weight: 600;
+  padding: 8px 0;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Hover Text */
+nav ul li a:hover {
+  color: #ff0000;
+}
+
+/* Underline Animation */
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0%;
+  height: 3px;
+  background: #ff0000;
+  border-radius: 10px;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Hover Underline */
+nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* Active Link */
+nav ul li a.active {
+  color: #ff0000;
+}
+
+nav ul li a.active::after {
+  width: 100%;
+}
+
+/* User Section */
+.user-section {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  position: relative;
+}
+
+.username {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1e293b;
+  transition: all 0.3s ease-in-out;
+}
+
+
+/* Profile Button */
+.profile-trigger {
+  width: 45px;
+  height: 45px;
+  border: 2px solid #ff0000;
+  border-radius: 50%;
+  background: rgba(255, 0, 0, 0.08);
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-trigger:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+.profile-trigger img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Dropdown */
+.profile-dropdown {
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  min-width: 170px;
+  background: white;
+  border: 1px solid rgba(255, 0, 0, 0.3);
+  border-radius: 10px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.15);
+  padding: 10px;
+  z-index: 200;
+}
+
+.profile-dropdown a,
+.profile-dropdown button {
+  width: 100%;
+  display: block;
+  padding: 12px;
+  border: none;
+  background: transparent;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #334155;
+  font-size: 15px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.profile-dropdown a:hover,
+.profile-dropdown button:hover {
+  background: rgba(255, 0, 0, 0.1);
+  color: #ff0000;
+  transform: translateX(5px);
+}
+
+/* Login Button */
+.login-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 10px;
+  background: #ff0000;
+  color: white;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.login-btn:hover {
+  background: #cc0000;
+  transform: translateY(-2px);
+  box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}
+
+/* Menu Icon */
+.menu-icon {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: transparent;
+  color: #ff0000;
+  font-size: 18px;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+  border: none;
+}
+
+.menu-icon:hover {
+  opacity: 0.7;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+
+  header {
+    padding: 15px 15px;
+  }
+
+  .brand img {
+    width: 120px;
+  }
+
+  .menu-icon {
+    display: flex;
+  }
+
+  nav {
+    display: none;
+    position: absolute;
+    top: 75px;
+    left: 0;
+    width: 100%;
+    background: white;
+    flex-direction: column;
+    gap: 25px;
+    padding: 25px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+    width: 100%;
+  }
+
+  .user-section {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .login-btn {
+    width: 100%;
+  }
+
+  .profile-dropdown {
+    right: 50%;
+    transform: translateX(50%);
+  }
+}

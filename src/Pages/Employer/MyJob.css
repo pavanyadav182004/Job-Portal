@@ -1,0 +1,144 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background: #f4f7fc;
+}
+
+/* Main Container */
+.my-jobs-container {
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.my-jobs-container h1 {
+  margin-bottom: 0;
+  color: #1e293b;
+  font-size: 36px;
+}
+
+.page-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 30px;
+}
+
+.primary-link {
+  background: #2563eb;
+  color: white;
+  padding: 12px 18px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+/* Grid Layout */
+.jobs-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 350px);
+  gap: 20px;
+  justify-content: start;
+}
+
+/* Job Card */
+.job-card {
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+   width: 350px;
+}
+
+.job-card:hover {
+  transform: translateY(-5px);
+}
+
+.job-card h3 {
+  color: #000; /* 100% black */
+  margin-bottom: 15px;
+  font-size: 22px;
+}
+
+.job-card p {
+  margin: 10px 0;
+  color: #475569;
+  font-size: 16px;
+}
+
+/* Button Section */
+.btn-group {
+  display: flex;
+  justify-content: flex-start;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.btn-group a {
+  text-decoration: none;
+}
+
+/* IMPORTANT */
+.btn-group button {
+  width: 100px !important;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  color: white;
+  flex: none !important;
+}
+
+/* Edit Button */
+.edit-btn {
+  background: #ef4444; /* Changed to red */
+}
+
+.edit-btn:hover {
+  background: #dc2626;
+}
+
+/* Delete Button */
+.delete-btn {
+  background: #2563eb; /* Changed to blue */
+}
+
+.delete-btn:hover {
+  background: #1d4ed8;
+}
+
+/* No Jobs */
+.no-jobs {
+  text-align: center;
+  color: #ef4444;
+  font-size: 18px;
+  margin-top: 30px;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .page-title-row {
+    align-items: stretch;
+    flex-direction: column;
+  }
+
+  .jobs-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .job-card {
+    width: 100%;
+  }
+
+  .btn-group {
+    justify-content: center;
+  }
+}
