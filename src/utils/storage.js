@@ -1,5 +1,6 @@
 import { STORAGE_KEYS } from "./constants";
 import { getLocalItem, removeLocalItem, setLocalItem } from "./localStorage";
+import { initialJobs } from "../data/initialJobs";
 
 // Emergency cleanup: if localStorage is too large, clear huge files to fix QuotaExceededError
 try {
@@ -26,38 +27,7 @@ try {
   console.error("Cleanup error:", e);
 }
 
-export const seedJobs = [
-  // {
-  //   id: 101,
-  //   title: "Frontend Developer",
-  //   company: "TechNova Solutions",
-  //   location: "Bengaluru",
-  //   salary: "600000",
-  //   type: "Full Time",
-  //   description:
-  //     "Build responsive React interfaces, connect APIs, and improve user workflows for a growing product team.",
-  // },
-  // {
-  //   id: 102,
-  //   title: "React Intern",
-  //   company: "BrightApps",
-  //   location: "Remote",
-  //   salary: "180000",
-  //   type: "Internship",
-  //   description:
-  //     "Learn by shipping UI components, fixing bugs, and collaborating with designers and senior developers.",
-  // },
-  // {
-  //   id: 103,
-  //   title: "Backend Developer",
-  //   company: "CloudCore Labs",
-  //   location: "Hyderabad",
-  //   salary: "750000",
-  //   type: "Full Time",
-  //   description:
-  //     "Create reliable APIs, manage database workflows, and support integrations for web applications.",
-  // },
-];
+export const seedJobs = initialJobs;
 
 export function readStorage(key, fallback = []) {
   return getLocalItem(key, fallback);
