@@ -18,10 +18,20 @@ try {
     localStorage.setItem(STORAGE_KEYS.CURRENT_USER, JSON.stringify(user));
   }
   const jobsStr = localStorage.getItem(STORAGE_KEYS.JOBS);
-  if (jobsStr && jobsStr.length > 1000000) {
+  if (jobsStr) {
     let jobs = JSON.parse(jobsStr);
-    jobs = jobs.map(j => ({ ...j, companyImage: null }));
-    localStorage.setItem(STORAGE_KEYS.JOBS, JSON.stringify(jobs));
+    // Remove old dummy jobs if they exist, but keep user's own added jobs
+    const dummyIds = [101, 102, 103, 104, 1, 2, 3];
+    const filteredJobs = jobs.filter(j => !dummyIds.includes(j.id));
+    
+    // Also clean up huge images if quota was a problem
+    if (jobsStr.length > 1000000) {
+      filteredJobs.forEach(j => { j.companyImage = null; });
+    }
+    
+    if (jobs.length !== filteredJobs.length) {
+      localStorage.setItem(STORAGE_KEYS.JOBS, JSON.stringify(filteredJobs));
+    }
   }
 } catch (e) {
   console.error("Cleanup error:", e);
